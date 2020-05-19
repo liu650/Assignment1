@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="./script.js"></script>
+</head>
+
+<body onload="change()">
+    <h1>CPSC 436i Message List Website</h1>
+    <div id="nav">
+        <ul>
+            <li><a class="item" href="./index.html">Main</a> </li>
+            <li><a class="item" href="./about.html">About</a> </li>
+        </ul>
+    </div>
+
+    <div id="msgPane">
+        <!-- div for showing message  -->
+        <ul>
+            <li><a class="item" href="./index.html">Main</a> </li>
+            <li><a class="item" href="./about.html">About</a> </li>
+        </ul>
+
+    </div>
+
+    <form id="msgForm" onsubmit="clickSend(); return false">
+        <input class="inputbox" type="text" id="msgInput">
+        <br>
+        <input class="customButton" type="submit" value="SEND">
+        <button class="customButton" type="button" onclick=clickClear()>CLEAR</button>
+        <br>
+    </form>
+
+</body>
+
+</html>
