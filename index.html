@@ -3,8 +3,9 @@
 
 <head>
     <title>Main</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <!-- <script type="text/javascript" src="./sript.js"></script> -->
 </head>
 
 <body onload="change()">
@@ -24,8 +25,10 @@
     <form id="msgForm" onsubmit="clickSend(); return false">
         <input class="inputbox" type="text" id="msgInput">
         <br>
+        <!-- <input class="customButton" type="submit" value="SEND">
+        <button class="customButton" type="button" onclick=clickClear()>CLEAR</button> -->
         <input class="customButton" type="submit" value="SEND">
-        <button class="customButton" type="button" onclick=clickClear()>CLEAR</button>
+        <input class="customButton" type="button" value = "CLEAR" onclick="clickClear()" >
         <br>
     </form>
 

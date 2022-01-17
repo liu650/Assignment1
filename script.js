@@ -5,13 +5,14 @@ function clickSend() {
     let thing = 'initial';
     thing = document.getElementById('msgInput').value;
     document.getElementById('msgInput').value = "";
-    console.log(thing);
+
     let list = JSON.parse(msgList);
     if (thing !== "") {
         list.push({ text: thing, time: new Date().toLocaleTimeString() });
     }
     msgList = JSON.stringify(list);
     change();
+    
 }
 
 function clickClear() {
@@ -19,6 +20,18 @@ function clickClear() {
     change();
 }
 
+function change() {
+    let string = "";
+    let list = JSON.parse(msgList);
+    for (let item of list) {
+        string += item["text"] + "&nbsp <span style=\"font-size: 0.5em\">" + item["time"] + "</span>" + "<br>";
+    }
+    let thing = document.getElementById('msgPane');
+    thing.innerHTML = string;
+    thing.scrollTop = thing.scrollHeight;
+    // document.getElementById('msgPane').innerHTML = string;
+    // document.body.style.background = "red";
+}
 
 // function change() {
 //     let string = "";
@@ -37,18 +50,7 @@ function clickClear() {
 
 
 
-function change() {
-    let string = "";
-    let list = JSON.parse(msgList);
-    for (let item of list) {
-        string += item["text"] + "&nbsp <span style=\"font-size: 0.5em\">" + item["time"] + "</span>" + "<br>";
-    }
-    let thing = document.getElementById('msgPane');
-    thing.innerHTML = string;
-    thing.scrollTop = thing.scrollHeight;
-    // document.getElementById('msgPane').innerHTML = string;
-    // document.body.style.background = "red";
-}
+
 
 
 // function myFunction() {
